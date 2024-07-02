@@ -15,9 +15,9 @@ jobs:
           uses: easingthemes/ssh-deploy@main
           env:
             SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-            ARGS: "-rltgoDzv0 --delete --no-perms"
+            ARGS: "-rltgoDzv0 --delete --no-perms --no-times"
             SOURCE: "./"
             REMOTE_HOST: "ec2-54-162-23-44.compute-1.amazonaws.com"
             REMOTE_USER: "ubuntu"
             TARGET: "/var/www/html/dw2s5-Laravel/"
-            EXCLUDE: "/dist/, /vendor/, /node_modules/, **.env"
+            EXCLUDE: "/dist/, /vendor/, /node_modules/, **.env, .git"
