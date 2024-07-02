@@ -14,8 +14,8 @@ jobs:
         - name: Copy files with SSH
           uses: easingthemes/ssh-deploy@main
           env:
-            SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
-            ARGS: "-rltgoDzv0 --delete"
+            SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+            ARGS: "-rltgoDzv0 --delete --no-perms"
             SOURCE: "./"
             REMOTE_HOST: "ec2-54-162-23-44.compute-1.amazonaws.com"
             REMOTE_USER: "ubuntu"
