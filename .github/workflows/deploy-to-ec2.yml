@@ -17,7 +17,7 @@ jobs:
             SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
             ARGS: "-rltgoDzp0 --delete --no-perms --no-times"
             SOURCE: "./"
-            REMOTE_HOST: "ec2-18-206-178-11.compute-1.amazonaws.com"
+            REMOTE_HOST: "ec2-44-220-169-223.compute-1.amazonaws.com"
             REMOTE_USER: "ubuntu"
             TARGET: "/var/www/html/dw2s5-Laravel/"
             EXCLUDE: "/dist/, /vendor/, /node_modules/, **.env, .git"
