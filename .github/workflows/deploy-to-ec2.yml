@@ -24,9 +24,9 @@ jobs:
           REMOTE_USER: "ubuntu"
           TARGET: "/var/www/html/dw2s5-Laravel/"
 
-      # Novo passo de depuração
+      # Passo de depuração opcional para verificar o estado do diretório
       - name: Debugging information
         run: |
           ls -al /var/www/html/
-          id ubuntu
+          id
           df -h
