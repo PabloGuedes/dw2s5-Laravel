@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the files
+      - name: Checkout the code
         uses: actions/checkout@v4
 
-      - name: Copy files with SSH
+      - name: Deploy via SSH
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          ARGS: "-rltgoDzp0 --delete --no-perms --no-times --exclude=/dist/ --exclude=/vendor/ --exclude=/node_modules/ --exclude=**.env --exclude=.git"
+          ARGS: "-rltgoDzp0 --delete --no-perms --no-times --exclude=/dist/ --exclude=/vendor/ --exclude=/node_modules/ --exclude=.env --exclude=.git"
           SOURCE: "./"
           REMOTE_HOST: "ec2-54-167-79-37.compute-1.amazonaws.com"
           REMOTE_USER: "ubuntu"
