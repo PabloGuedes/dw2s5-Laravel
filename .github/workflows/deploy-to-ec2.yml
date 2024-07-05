@@ -27,6 +27,6 @@ jobs:
       # Novo passo de depuração
       - name: Debugging information
         run: |
-          ls -al /var/www/html/dw2s5-Laravel/
+          ls -al /var/www/html/
           id ubuntu
           df -h
