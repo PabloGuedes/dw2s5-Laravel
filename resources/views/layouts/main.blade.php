@@ -69,7 +69,7 @@
         </div>
     </main>
     <footer>
-        <p>HDC Events &copy; 2020</p>
+        <p>HDC Events &copy; 2024</p>
     </footer>
 
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
